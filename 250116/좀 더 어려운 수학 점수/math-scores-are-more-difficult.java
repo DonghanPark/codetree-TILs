@@ -12,7 +12,7 @@ public class Main {
         bMath = sc.nextInt();
         bEng = sc.nextInt();
 
-        if (aMath > bMath || (aMath == bMath && aEng > b Eng))
+        if (aMath > bMath || (aMath == bMath && aEng > bEng))
             System.out.print('A');
         else
             System.out.print('B');
