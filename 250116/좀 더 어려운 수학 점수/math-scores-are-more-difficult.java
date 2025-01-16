@@ -14,9 +14,15 @@ public class Main {
 
         if (aMath > bMath)
             System.out.print('A');
-        else if (aEng > bEng)
-            System.out.print('A');
-        else
+        else if (aMath < bMath)
             System.out.print('B');
+        else {
+            if (aEng > bEng)
+                System.out.print('A');
+            else
+                System.out.print('B');
+        }
+        
+        
     }
 }
