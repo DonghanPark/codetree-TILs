@@ -9,7 +9,7 @@ public class Main {
         int temp;
 
         for(int i = 0; i < 3; i++) {
-            sick = sc.String().charAt(0);
+            sick = sc.next().charAt(0);
             temp = sc.nextInt();
 
             if (sick == 'Y' && temp >= 37)
