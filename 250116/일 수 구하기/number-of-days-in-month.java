@@ -5,7 +5,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int n = nextInt();
+        int n = sc.nextInt();
 
         if (n == 2)
             System.out.print(28);
