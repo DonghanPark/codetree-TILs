@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        int a, b, c = 5, 6, 7;
+        int a = 5;
+        int b = 6
+        int c = 7;
         int temp = 0;
 
         temp = b;
