@@ -12,15 +12,10 @@ public class Main {
         bMath = sc.nextInt();
         bEng = sc.nextInt();
 
-        if (aMath > bMath)
+        if (aMath > bMath || (aMath == bMath && aEng > b Eng))
             System.out.print('A');
-        else if (aMath < bMath)
+        else
             System.out.print('B');
-        else {
-            if (aEng > bEng)
-                System.out.print('A');
-            else
-                System.out.print('B');
         }
         
         
