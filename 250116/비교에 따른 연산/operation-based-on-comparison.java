@@ -7,8 +7,8 @@ public class Main {
 
         int a, b;
 
-        a = nextInt();
-        b = nextInt();
+        a = sc.nextInt();
+        b = sc.nextInt();
 
         if (a < b) {
             System.out.println(a*b);
