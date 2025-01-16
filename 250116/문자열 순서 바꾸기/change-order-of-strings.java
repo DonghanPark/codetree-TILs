@@ -5,7 +5,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        Strint s, t;
+        String s, t;
         
         s = sc.next();
         t = sc.next();
