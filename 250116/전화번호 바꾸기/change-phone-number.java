@@ -9,9 +9,9 @@ public class Main {
         String phone;
         char temp;
         
-        firstPhoneNum = sc.next();
-        secondPhoneNum = sc.next();
-        thirdPhoneNum = sc.next();
+        String firstPhoneNum = sc.next();
+        String secondPhoneNum = sc.next();
+        String thirdPhoneNum = sc.next();
 
         System.out.printf("%s-%s-%s", firstPhoneNum, thirdPhoneNum, secondPhoneNum);
     }
