@@ -16,8 +16,5 @@ public class Main {
             System.out.print('A');
         else
             System.out.print('B');
-        }
-        
-        
     }
 }
