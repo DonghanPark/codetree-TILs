@@ -10,7 +10,7 @@ public class Main {
         if (n == 2)
             System.out.print(28);
         else {
-            if (n % 2)
+            if (n % 2 == 0)
                 System.out.print(30);
             else
                 System.out.print(31);
