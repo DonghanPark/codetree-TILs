@@ -5,7 +5,7 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int n = nextInt();
+        int n = sc.nextInt();
 
         System.out.println(n*n);
         if (n < 5) {
