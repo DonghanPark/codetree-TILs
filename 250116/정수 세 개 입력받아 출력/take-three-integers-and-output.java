@@ -11,6 +11,6 @@ public class Main {
         b = sc.nextInt();
         c = sc.nextInt();
 
-        System.out.printf("%d %d\n%d", a, b, c);
+        System.out.printf("%d %d %d", a, b, c);
     }
 }
