@@ -11,7 +11,7 @@ public class Main {
         b = sc.nextInt();
         c = sc.nextInt();
 
-        if (a == min(a, b, c))
+        if (a == Math.min(a, Math.min(b, c)))
             System.out.print(1 + " ");
         else
             System.out.print(0 + " ");
