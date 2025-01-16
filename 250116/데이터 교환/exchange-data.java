@@ -7,11 +7,8 @@ public class Main {
 
         temp = b;
         b = a;
-        a = temp;
-
-        temp = c;
-        c = a;
-        a = temp;
+        a = c;
+        c = temp;
         
         System.out.println(a);
         System.out.println(b);
