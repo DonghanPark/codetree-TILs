@@ -10,7 +10,7 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        answer = a%b
+        answer = a%b;
         System.out.print(answer);
     }
 }
