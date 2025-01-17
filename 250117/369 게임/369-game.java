@@ -24,7 +24,7 @@ public class Main {
 
     public static boolean contains369(int num) {
         while(num != 0) {
-            if ((num % 10) % 3 == 0)
+            if (num % 10 != 0 && (num % 10) % 3 == 0)
                 return true;
             num /= 10;
         }
