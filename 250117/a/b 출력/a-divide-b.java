@@ -5,12 +5,16 @@ public class Main {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        double a, b, answer;
+        int a, b, answer = 0;
 
         a = sc.nextInt();
         b = sc.nextInt();
 
-        answer = a%b;
-        System.out.print(answer);
+        for (int i = 0; i < 21; i++) {
+            System.out.print(a/b);
+            a = (a % b) * 10;
+            if(i == 0)
+                System.out.print(".");
+        }
     }
 }
