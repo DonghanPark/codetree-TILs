@@ -10,7 +10,7 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        for (i = a; i <= b; i++) {
+        for (int i = a; i <= b; i++) {
             if (i % 2 != 0)
                 System.out.printf("%d ", i);
         }
