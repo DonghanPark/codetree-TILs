@@ -9,7 +9,7 @@ public class Main {
 
         for (int i = 1; i <= n; i++) {
             if (isThreeTimes(i) || contains369(i))
-                System.out.print(0);
+                System.out.print(0 + " ");
             else
                 System.out.printf("%d ", i);
         }
