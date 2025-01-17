@@ -10,7 +10,7 @@ public class Main {
         a = sc.nextInt();
         b = sc.nextInt();
 
-        answer = (int)(a/b*10000000000)/10000000000.0;
+        answer = (a/b*10000000000)/10000000000.0;
         System.out.print(answer);
     }
 }
