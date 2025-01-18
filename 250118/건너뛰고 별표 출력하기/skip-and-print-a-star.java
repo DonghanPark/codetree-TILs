@@ -8,15 +8,18 @@ public class Main {
         int n = sc.nextInt();
         int count = 1;
 
-        for (int i = 0; i < 2*n-1; i++) {
-            for (int j = 0; j < count; j++) {
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < i+1; j++) {
                 System.out.print("*");
             }
             System.out.print("\n\n");
-            if (count < 4)
-                count++;
-            else
-                count--;
+        }
+
+        for (int i = n-1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                System.out.print("*");
+            }
+            System.out.print("\n\n");
         }
     }
 }
