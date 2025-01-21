@@ -16,6 +16,7 @@ public class Main {
                 if (count > 4)
                     count = 1;
             }
+            System.out.println();
         }
     }
 }
