@@ -5,6 +5,17 @@
 접근방식
 - 1. 2중 for
 - 2. 누적합, 가장 큰 값을 구하기 위한 for
+- 3. k 구간 첫번째를 구해두고 그 k의 제일 처음을 뺴고 마지막을 더하면서 순회.
+```
+# 1. 처음 구간 합 계산
+window_sum = sum(arr[:k])
+max_sum = window_sum
+
+# 2. 슬라이딩 윈도우 돌리기
+for i in range(k, n):
+    window_sum = window_sum - arr[i - k] + arr[i]
+    max_sum = max(max_sum, window_sum)
+```
 
 선택방식
 - 2번
