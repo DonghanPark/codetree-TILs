@@ -1,6 +1,7 @@
 n, m = tuple(map(int, input().split()))
 arr = list(map(int, input().split()))
 
+'''
 def check_upper_bound(target):
     start, end = 0, n-1
     max_idx = -1
@@ -29,3 +30,18 @@ for _ in range(m):
     target = int(input())
     count = check_upper_bound(target)-check_lower_bound(target) + 1
     print(count)
+'''
+
+arr_dict = dict()
+for i in arr:
+    if i in arr_dict.keys():
+        arr_dict[i] = arr_dict[i] + 1
+    else:
+        arr_dict[i] = 1
+
+for _ in range(m):
+    target = int(input())
+    if target in arr_dict.keys():
+        print(arr_dict[target])
+    else:
+        print(0)
