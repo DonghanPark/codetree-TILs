@@ -1,10 +1,10 @@
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
 
-start = 0
-end = n-1
-
 def search_num(target):
+    start = 0
+    end = n-1
+
     while(start <= end):
         mid = (start + end) // 2
         if arr[mid] == target:
