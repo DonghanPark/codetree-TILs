@@ -1,3 +1,16 @@
+'''
+요구 사항
+- 입력 받은 수가 배열에서 몇 번째인지, 없다면 -1
+
+접근 방식
+- 1. 2중 for
+- 2. 이진탐색
+
+선택 방식
+- 2. 이진탐색
+- O(mlogn)으로 끝남
+'''
+
 n, m = map(int, input().split())
 arr = list(map(int, input().split()))
 
