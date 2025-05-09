@@ -27,7 +27,8 @@ def bfs(q):
 for point in points:
     q = [(point[0]-1, point[1]-1)]
     if visited[point[0]-1][point[1]-1] == 0:
-        bfs(q)
         visited[point[0]-1][point[1]-1] = 1
+        count += 1
+        bfs(q)
 
 print(count)
