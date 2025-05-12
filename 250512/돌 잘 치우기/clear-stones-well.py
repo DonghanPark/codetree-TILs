@@ -3,7 +3,7 @@ import copy
 
 n, k, m = tuple(map(int, input().split()))
 arr = [list(map(int, input().split())) for _ in range(n)]
-points = [tuple(map(int, input().split()))]
+points = [tuple(map(int, input().split())) for _ in range(k)]
 
 dxs = [0, 0, -1, 1]
 dys = [-1, 1, 0, 0]
@@ -60,13 +60,14 @@ for stone_to_erase in stone_to_erase_list:
     # global visited
     visited = [[0]*n for _ in range(n)]
     for x, y in points:
+        # print(x, y)
         bfs(arr_erased, x-1, y-1) # 0-based
 
     # 방문 수 확인
     visited_count = 0
     for temp in visited:
         visited_count += sum(temp)
-    
+    # print(visited_count)
     if visited_count > max_visited_count:
         max_visited_count = visited_count
 
