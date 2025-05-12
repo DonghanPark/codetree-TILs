@@ -8,6 +8,8 @@ points = [tuple(map(int, input().split()))]
 dxs = [0, 0, -1, 1]
 dys = [-1, 1, 0, 0]
 
+total_visited = [[0]*n for _ in range(n)]
+
 # 지우기
 # 탐색
 # visited sum
@@ -25,9 +27,10 @@ def make_stone_list():
 def in_range(x, y):
     return 0 <= x < n and 0 <= y < n
 
-def bfs(arr_erased, x, y):
-    visited = [[0]*n for _ in range(n)]
+def bfs(arr_erased, x, y, visited):
+    # visited = [[0]*n for _ in range(n)]
     visited[x][y] = 1
+    total_visited[x][y] = 1
     q = [(x, y)]
 
     while(q):
@@ -39,6 +42,7 @@ def bfs(arr_erased, x, y):
             if in_range(nx, ny) and visited[nx][ny] == 0 and arr_erased[nx][ny] == 0:
                 q.append((nx, ny))
                 visited[nx][ny] = 1
+                total_visited[nx][ny] = 1
 
     return visited
 
@@ -53,15 +57,16 @@ for stone_to_erase in stone_to_erase_list:
         arr_erased[x][y] = 0
     
     # 시작 지점에 따라 bfs
+    visited = [[0]*n for _ in range(n)]
     for x, y in points:
-        visited = bfs(arr_erased, x-1, y-1) # 0-based
+        visited = bfs(arr_erased, x-1, y-1, visited) # 0-based
 
-        # 방문 수 확인
-        visited_count = 0
-        for temp in visited:
-            visited_count += sum(temp)
-        
-        if visited_count > max_visited_count:
-            max_visited_count = visited_count
+    # 방문 수 확인
+    visited_count = 0
+    for temp in visited:
+        visited_count += sum(temp)
+    
+    if visited_count > max_visited_count:
+        max_visited_count = visited_count
 
 print(max_visited_count)
