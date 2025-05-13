@@ -25,10 +25,6 @@ def bfs():
     while(q):
         cx, cy = q.popleft()
 
-        reach_end = cx == n-1 and cy == m-1
-        if reach_end:
-            break
-
         for dx, dy in zip(dxs, dys):
             nx, ny = cx + dx, cy + dy
             if can_go(nx, ny):
