@@ -35,6 +35,9 @@ def bfs():
                 q.append((nx, ny))
                 visited[nx][ny] = 1
                 step[nx][ny] = step[cx][cy] + 1 # visited 덕분에 최소가 보장되므로 min() 사용 X
+    
+    if step[n-1][m-1] == 0:
+        step[n-1][m-1] = -1
 
 def escape():
     init()
