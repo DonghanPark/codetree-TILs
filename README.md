@@ -4,6 +4,8 @@
 
 | 번호 | 문제 제목                 | 링크                                       | 복습 횟수 | 마지막 복습 날짜 |
 |------|--------------------------|--------------------------------------------|-----------|------------------|
+| 6    | 그 계절, 그 날            | [문제 링크](https://www.codetree.ai/ko/trails/personalized/curated-cards/test-that-season-that-day/description)    | 0      | 2025-05-16       |
+| 5    | 재귀함수를 이용한 별 출력 2| [문제 링크](https://www.codetree.ai/ko/trails/personalized/curated-cards/test-star-output-with-recursive-function-2/description)    | 0      | 2025-05-16       |
 | 4    | 최소 경로로 탈출 하기      | [문제 링크](https://www.codetree.ai/ko/trails/complete/curated-cards/intro-escape-with-min-distance/description)   | 0      | 2025-05-13       |
 | 3    | 돌 잘 치우기              | [문제 링크](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-clear-stones-well/description)       | 0      | 2025-05-12       |
 | 2    | K번 최댓값으로 이동하기    | [문제 링크](https://www.codetree.ai/ko/trails/complete/curated-cards/challenge-move-to-max-k-times/description)     | 0      | 2025-05-09       |
