@@ -1,8 +1,8 @@
 n = int(input())
-MAX_SIZE = 2000
+MAX_SIZE = 200000
 tile = [0] * (MAX_SIZE + 1)
 DIRECTION_OFFSET = {"R":1, "L":-1}
-location = 1000
+location = 100000
 
 for _ in range(n):
     num, way = tuple(input().split())
