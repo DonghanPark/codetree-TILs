@@ -1,13 +1,8 @@
 n = int(input())
-MAX_SIZE = 1000
+MAX_SIZE = 2000
 tile = [0] * (MAX_SIZE + 1)
 DIRECTION_OFFSET = {"R":1, "L":-1}
-location = 1
-
-def calc_next_location(location, num, way):
-    DIRECTION_OFFSET = {"R":1, "L":-1}
-    OFFSET = DIRECTION_OFFSET[way] * num
-    return location + OFFSET
+location = 1000
 
 for _ in range(n):
     num, way = tuple(input().split())
@@ -18,5 +13,5 @@ for _ in range(n):
         tile[i] = DIRECTION_OFFSET[way]
     
     location = next_location
-
+# print(tile)
 print(tile.count(-1), tile.count(1))
