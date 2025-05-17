@@ -1,6 +1,6 @@
 n, m = tuple(map(int, input().split()))
 
-def parse_input(n: int) -> list[int]:
+def parse_input(n: int) -> list[tuple[int, int]]:
     DIRECTION_OFFSET = {"L":-1, "R":1}
 
     moves = list()
