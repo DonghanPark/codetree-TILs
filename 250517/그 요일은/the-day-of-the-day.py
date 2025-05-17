@@ -8,7 +8,7 @@ def cal_days(m, d):
     return sum(num_of_days[:m]) + d
 
 days = cal_days(m2, d2) - cal_days(m1, d1)
-weeks = days // 8
+weeks = days // 7
 
 if days % 7 >= days_of_weak[string]:
     print(weeks + 1)
