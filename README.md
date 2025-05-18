@@ -4,6 +4,7 @@
 
 | 번호 | 문제 제목                 | 링크                                       | 복습 횟수 | 마지막 복습 날짜 |
 |------|--------------------------|--------------------------------------------|-----------|------------------|
+| 17   | 특정 수와 근접한 합         | [문제 링크](https://www.codetree.ai/ko/trails/personalized/curated-cards/test-sum-close-to-particular-number/description)    | 0      | 2025-05-17       |
 | 16   | 선두를 지켜라 3         | [문제 링크](https://www.codetree.ai/ko/trails/personalized/curated-cards/test-keep-the-lead-3/description)    | 0      | 2025-05-17       |
 | 15   | 벌금은 누구에게         | [문제 링크](https://www.codetree.ai/ko/trails/personalized/curated-cards/intro-who-will-pay/description)    | 0      | 2025-05-17       |
 | 14   | 만나는 그 순간         | [문제 링크](https://www.codetree.ai/ko/trails/personalized/curated-cards/intro-the-moment-we-meet/description)    | 0      | 2025-05-17       |
