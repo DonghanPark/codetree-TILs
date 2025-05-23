@@ -12,7 +12,7 @@ def calc_gap(i, j, k):
 min_gap = sys.maxsize
 for i in range(n):
     for j in range(i + 1, n):
-        for k in range(i + 2, n):
+        for k in range(j + 1, n):
             gap = calc_gap(i, j, k)
             
             if gap < min_gap:
