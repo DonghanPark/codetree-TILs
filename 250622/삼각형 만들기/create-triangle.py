@@ -1,7 +1,7 @@
 n = int(input())
 points = [tuple(map(int, input().split())) for _ in range(n)]
 
-min_dis = 0
+max_dis = 0
 
 for i in range(n):
     for j in range(i+1, n):
@@ -25,7 +25,6 @@ for i in range(n):
                 vertical_dis = abs(points[k][1] - points[i][1])
             
             dis = horizon_dis * vertical_dis
-            if dis != 0:
-                min_dis = dis
+            max_dis = max(max_dis, dis)
 
-print(min_dis)
+print(max_dis)
