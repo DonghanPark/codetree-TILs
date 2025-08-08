@@ -42,6 +42,8 @@ public class Main {
                     }
                 }
 
+                if (maxAdjacencyNum == -1) continue;
+
                 marbles[j][0] = maxX + 1;
                 marbles[j][1] = maxY + 1;
 
