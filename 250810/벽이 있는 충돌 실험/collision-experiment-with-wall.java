@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-
 public class Main {
     static class Marble {
         int x;
@@ -30,31 +29,25 @@ public class Main {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
-        // Scanner sc = new Scanner(System.in);
-        // int T = sc.nextInt();
+
         st = new StringTokenizer(br.readLine());
         int T = Integer.parseInt(st.nextToken());
         while(T-- > 0) {
             st = new StringTokenizer(br.readLine());
-            // int N = sc.nextInt();
-            // int M = sc.nextInt();
             int N = Integer.parseInt(st.nextToken());;
             int M = Integer.parseInt(st.nextToken());;
             
             final int PERIOD = 2 * N - 1;
             int removedMarbles = 0;
 
-            // Marble[] marbles = new Marble[M];
             ArrayList<Marble> marbles = new ArrayList<>();
             
             for (int i = 0; i < M; i++) {
-                // int x = sc.nextInt()-1;
-                // int y = sc.nextInt()-1;
                 st = new StringTokenizer(br.readLine());
                 int x = Integer.parseInt(st.nextToken())-1;
                 int y = Integer.parseInt(st.nextToken())-1;
                 char d = st.nextToken().charAt(0);
-                // marbles[i] = new Marble(x, y, direction.get(d));
+
                 marbles.add(new Marble(x, y ,direction[d]));
             }
 
@@ -104,3 +97,4 @@ public class Main {
         }
     }
 }
+
