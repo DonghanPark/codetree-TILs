@@ -17,11 +17,11 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Map<Character, Integer> direction = new HashMap<>();
-        direction.put('U', 0);
-        direction.put('D', 1);
-        direction.put('R', 2);
-        direction.put('L', 3);
+        int[] direction = new int[128];
+        direction['U'] = 0;
+        direction['D'] = 1;
+        direction['R'] = 2;
+        direction['L'] = 3;
         int[] dx = new int[]{-1, 1, 0, 0};
         int[] dy = new int[]{0, 0, 1, -1};
 
@@ -42,7 +42,7 @@ public class Main {
                 int y = sc.nextInt()-1;
                 char d = sc.next().charAt(0);
                 // marbles[i] = new Marble(x, y, direction.get(d));
-                marbles.add(new Marble(x, y ,direction.get(d)));
+                marbles.add(new Marble(x, y ,direction[d]));
             }
 
             for (int i = 0; i < PERIOD; i++) {
@@ -63,15 +63,9 @@ public class Main {
                     }
                     // change direction
                     else {
-                        if (d >= direction.get('R')) {
-                            marbles.get(j).d = (d + 1) % 2 + 2;
-                        }
-                        else {
-                            marbles.get(j).d = (d + 1) % 2;
-                        }
-
-                        if (x < N && y < N)
-                            grid[x][y] += 1;
+                        d = d ^ 1;
+                        marbles.get(j).d = d;
+                        grid[x][y] += 1;
                     }
                 }
 
@@ -81,7 +75,7 @@ public class Main {
                     int x = marbles.get(j).x;
                     int y = marbles.get(j).y;
 
-                    if (x < N && y < N && grid[x][y] > 1) {
+                    if (grid[x][y] > 1) {
                         marblesToRemove.add(marbles.get(j));
                         removedMarbles++;
                     }
