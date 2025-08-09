@@ -25,6 +25,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
         int T = sc.nextInt();
+        Marble[] marbles = new Marble[50*50];
         while(T-- > 0) {
             int N = sc.nextInt();
             int M = sc.nextInt();
@@ -32,7 +33,7 @@ public class Main {
             final int PERIOD = 2 * N - 1;
             int removedMarbles = 0;
 
-            Marble[] marbles = new Marble[M];
+            
             for (int i = 0; i < M; i++) {
                 int x = sc.nextInt()-1;
                 int y = sc.nextInt()-1;
