@@ -44,8 +44,11 @@ public class Main {
                 // move
                 int[][] grid = new int[N][N];
                 for (int j = 0; j < M; j++) {
-                    int nx = marbles[j].x + dx[marbles[j].d];
-                    int ny = marbles[j].y + dy[marbles[j].d];
+                    int x = marbles[j].x;
+                    int y = marbles[j].y;
+                    int d = marbles[j].d;
+                    int nx = x + dx[d];
+                    int ny = y + dy[d];
                     
                     // valid range
                     if (nx >= 0 && nx < N && ny >= 0 && ny < N) { 
@@ -55,14 +58,15 @@ public class Main {
                     }
                     // change direction
                     else {
-                        if (marbles[j].d >= direction.get('R')) {
-                            marbles[j].d = (marbles[j].d + 1) % 2 + 2;
+                        if (d >= direction.get('R')) {
+                            marbles[j].d = (d + 1) % 2 + 2;
                         }
                         else {
-                            marbles[j].d = (marbles[j].d + 1) % 2;
+                            marbles[j].d = (d + 1) % 2;
                         }
-                        if (marbles[j].x < N && marbles[j].y < N)
-                            grid[marbles[j].x][marbles[j].y] += 1;
+
+                        if (x < N && y < N)
+                            grid[x][y] += 1;
                     }
                 }
 
