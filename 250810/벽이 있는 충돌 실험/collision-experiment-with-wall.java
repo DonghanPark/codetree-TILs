@@ -74,23 +74,21 @@ public class Main {
                         grid[x][y] += 1;
                     }
                 }
-
+                
                 // check collision
-                ArrayList<Marble> marblesToRemove = new ArrayList<>();
+                ArrayList<Marble> newMarbles = new ArrayList<>();
                 for (int j = 0; j < marbles.size(); j++) {
                     int x = marbles.get(j).x;
                     int y = marbles.get(j).y;
 
-                    if (grid[x][y] > 1) {
-                        marblesToRemove.add(marbles.get(j));
+                    if (grid[x][y] > 1)
                         removedMarbles++;
-                    }
+
+                    if (grid[x][y] == 1)
+                        newMarbles.add(marbles.get(j));
                 }
 
-                // remove marbles
-                for (int j = 0; j < marblesToRemove.size(); j++) {
-                    marbles.remove(marblesToRemove.get(j));
-                }
+                marbles = newMarbles;
             }
 
             System.out.println(M - removedMarbles);
