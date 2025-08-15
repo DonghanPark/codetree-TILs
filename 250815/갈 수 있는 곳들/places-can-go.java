@@ -2,15 +2,6 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-    static class Pair {
-        int x, y;
-
-        public Pair(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-    }
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
@@ -27,13 +18,13 @@ public class Main {
         }
 
         int[][] visited = new int[N][N];
-        Queue<Pair> queue = new ArrayDeque<>();
+        Queue<int[]> queue = new ArrayDeque<>();
         for (int i = 0; i < K; i++) {
             st = new StringTokenizer(br.readLine());
             int x = Integer.parseInt(st.nextToken()) - 1;
             int y = Integer.parseInt(st.nextToken()) - 1;
             
-            queue.offer(new Pair(x, y));
+            queue.offer(new int[]{x, y});
             visited[x][y] = 1;
         }
 
@@ -41,10 +32,10 @@ public class Main {
         int[] dy = new int[]{0, 0, -1, 1};
         int count = 0;
         while(!queue.isEmpty()) {
-            Pair point = queue.poll();
+            int[] point = queue.poll();
             count++;
-            int x = point.x;
-            int y = point.y;
+            int x = point[0];
+            int y = point[1];
 
             for (int i = 0; i < 4; i++) {
                 int nx = x + dx[i];
@@ -55,7 +46,7 @@ public class Main {
                 if (visited[nx][ny] == 1) continue;
 
                 visited[nx][ny] = 1;
-                queue.offer(new Pair(nx, ny));
+                queue.offer(new int[]{nx, ny});
             }
         }
 
