@@ -10,46 +10,38 @@ public class Main {
             return;
         }
 
-        int[] count = new int[101];
-        int[] count2 = new int[101];
+        int[] patternFreq = new int[101];
+        int[] windowFreq = new int[101];
+
         int[] A = new int[N];
         for (int i = 0; i < N; i++)
             A[i] = sc.nextInt();
         int[] B = new int[M];
         for (int i = 0; i < M; i++) {
             B[i] = sc.nextInt();
-            count[B[i]]++;
-            count2[A[i]]++;
+            patternFreq[B[i]]++;
+            windowFreq[A[i]]++;
         }
-
-        
 
         int answer = 0;
-        boolean flag = false;
-        for (int i = 1; i < 101; i++) {
-            if (count[i] != count2[i]) {
-                flag = true;
-                break;
-            }
-        }
-        if (!flag) answer++;
+        if (isSameFrequency(patternFreq, windowFreq)) answer++;
         
         for (int i = M; i < N; i++) {
-            flag = false;
+            windowFreq[A[i]]++;
+            windowFreq[A[i-M]]--;
 
-            count2[A[i]]++;
-            count2[A[i-M]]--;
-
-            for (int j = 1; j < 101; j++) {
-                if (count[j] != count2[j]) {
-                    flag = true;
-                    break;
-                }
-            }
-
-            if (!flag) answer++;
+            if (isSameFrequency(patternFreq, windowFreq)) answer++;
         }
         
         System.out.println(answer);
+    }
+
+    private static boolean isSameFrequency(int[] A, int[] B) {
+        for (int i = 1; i < 101; i++) {
+            if (A[i] != B[i]) {
+                return false;
+            }
+        }
+        return true;
     }
 }
