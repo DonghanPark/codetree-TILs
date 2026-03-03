@@ -4,6 +4,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
         int M = sc.nextInt();
+
+        if (M > N) {
+            System.out.println(0);
+            return;
+        }
+
         int[] count = new int[101];
         int[] count2 = new int[101];
         int[] A = new int[N];
@@ -15,6 +21,8 @@ public class Main {
             count[B[i]]++;
             count2[A[i]]++;
         }
+
+        
 
         int answer = 0;
         boolean flag = false;
