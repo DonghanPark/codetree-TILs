@@ -4,11 +4,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int k = sc.nextInt();
-        // int[] candies = new int[n];
         int[] positions = new int[101];
         for (int i = 0; i < n; i++) {
-            // candies[i] = sc.nextInt();
-            // positions[i] = sc.nextInt();
             int candies = sc.nextInt();
             int position = sc.nextInt();
             positions[position] += candies;
