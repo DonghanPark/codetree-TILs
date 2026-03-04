@@ -16,7 +16,7 @@ public class Main {
         
         int sum = 0;
         int maxSum = 0;
-        int end = 2 * k + 1;
+        int end = Math.min(101, 2 * k + 1);
         for (int i = 0; i < end; i++) {
             sum += positions[i];
         }
