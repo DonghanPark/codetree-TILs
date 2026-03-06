@@ -16,6 +16,7 @@ public class Main {
             for (int j = 0; j < HUMAN; j++) {
                 for (int k = 0; k < HUMAN; k++) {
                     if (i == j || j == k || i == k) continue;
+
                     int team1 = power[i] + power[j];
                     int team2 = power[k];
                     int team3 = TOTAL_POWER - team1 - team2;
@@ -30,6 +31,7 @@ public class Main {
             }
         }
 
-        System.out.println(minGap);
+        if (minGap == 5001) System.out.println(-1);
+        else System.out.println(minGap);
     }
 }
