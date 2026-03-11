@@ -22,7 +22,9 @@ public class Main {
         }
         day2 += d2;
 
-        int dayOfTheWeek = (7 - day1 + day2) % 7;
+        int diff = (day1 - day2) % 7;
+
+        int dayOfTheWeek = (7 - diff) % 7;
 
         System.out.println(days[dayOfTheWeek]);
     }
