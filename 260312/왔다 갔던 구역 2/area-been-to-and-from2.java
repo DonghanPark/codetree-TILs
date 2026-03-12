@@ -11,8 +11,8 @@ public class Main {
             
             for (int j = 0; j < x; j++) {
                 if (dir == 'R') {
-                    start++;
                     coor[start]++;
+                    start++;
                 }
                 else {
                     start--;
@@ -25,7 +25,7 @@ public class Main {
         for (int i = 0; i < 2002; i++) {
             if (coor[i] >= 2) count++;
         }
-
+        
         System.out.println(count);
     }
 }
