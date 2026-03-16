@@ -26,13 +26,16 @@ public class Main {
             }
         }
 
-        int minX = 2001;
-        int minY = 2001;
+        int minX = 2002;
+        int minY = 2002;
         int maxX = 0;
         int maxY = 0;
+        int count = 0;
         for (int i = 0; i < 2001; i++) {
             for (int j = 0; j < 2001; j++) {
                 if (grid[i][j] != 1) continue;
+
+                count++;
 
                 minX = Math.min(minX, i);
                 minY = Math.min(minY, j);
@@ -41,6 +44,9 @@ public class Main {
             }
         }
 
-        System.out.println((maxX - minX + 1) * (maxY - minY + 1));
+        if (count == 0)
+            System.out.println(0);
+        else
+            System.out.println((maxX - minX + 1) * (maxY - minY + 1));
     }
 }
