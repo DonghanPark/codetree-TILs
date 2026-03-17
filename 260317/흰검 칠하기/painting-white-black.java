@@ -31,7 +31,7 @@ public class Main {
         int black = 0;
         int grey = 0;
         for (int i = 0; i < N*100*2 + 2; i++) {
-            if (grid[i][0] > 99 || (grid[i][0] % 10 >= 2 && grid[i][0] / 10 >= 2)) grey++;
+            if (grid[i][0] > 99 || (grid[i][0] % 10 >= 2 && (grid[i][0] / 10) % 10 >= 2)) grey++;
             else if (grid[i][0] > 0 && grid[i][1] == 1) black++;
             else if (grid[i][0] > 0 && grid[i][1] == 10) white++;
         }
