@@ -3,8 +3,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N = sc.nextInt();
-        int[][] grid = new int[(N*100*2 + 1)][2];
-        int curr = N*100;
+        int[][] grid = new int[(N*100*2 + 2)][2];
+        int curr = N*100 + 1;
         for (int i = 0; i < N; i++) {
             int x = sc.nextInt();
             char d = sc.next().charAt(0);
@@ -23,16 +23,14 @@ public class Main {
                     grid[curr][1] = 10;
                 }
                 curr += dir;
-
             }
-
             curr -= dir;
         }
         
         int white = 0;
         int black = 0;
         int grey = 0;
-        for (int i = 0; i < N*100*2 + 1; i++) {
+        for (int i = 0; i < N*100*2 + 2; i++) {
             if (grid[i][0] >= 22) grey++;
             else if (grid[i][0] > 0 && grid[i][1] == 1) black++;
             else if (grid[i][0] > 0 && grid[i][1] == 10) white++;
