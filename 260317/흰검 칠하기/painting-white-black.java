@@ -18,7 +18,10 @@ public class Main {
             else dir = -1;
 
             for (int j = 0; j < x; j++) {
-                // if (grid[curr][1]] == 100)
+                if (grid[curr][1] == 100) {
+                    curr += dir;
+                    continue;
+                } 
                 // if ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2)) {
                 //     grid[curr][1] = 100;
                 //     curr += dir;
