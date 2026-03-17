@@ -21,13 +21,7 @@ public class Main {
                 if (grid[curr][1] == 100) {
                     curr += dir;
                     continue;
-                } 
-                // if ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2)) {
-                //     grid[curr][1] = 100;
-                //     curr += dir;
-                //     System.out.println("YES");
-                //     continue;
-                // }
+                }
 
                 if (d == 'R') {
                     grid[curr][0] += 1;
@@ -37,27 +31,21 @@ public class Main {
                     grid[curr][0] += 10;
                     grid[curr][1] = 10;
                 }
-                if (grid[curr][0] > 99 || ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2))) {
+                if (grid[curr][0] > 99 || ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2)))
                     grid[curr][1] = 100;
-                    // curr += dir;
-                    // System.out.println("YES");
-                    // continue;
-                }
-                // System.out.println(grid[curr][0] + " " + grid[curr][1]);
+                
                 curr += dir;
             }
             curr -= dir;
-            // System.out.println();
         }
         
         int white = 0;
         int black = 0;
         int grey = 0;
         for (int i = 0; i < N*100*2 + 2; i++) {
-            // if (grid[i][0] > 99 || (grid[i][0] % 10 >= 2 && (grid[i][0] / 10) % 10 >= 2)) grey++;
             if (grid[i][1] == 100) grey++;
-            else if (grid[i][0] > 0 && grid[i][1] == 1) black++;
-            else if (grid[i][0] > 0 && grid[i][1] == 10) white++;
+            else if (grid[i][1] == 1) black++;
+            else if (grid[i][1] == 10) white++;
         }
 
         System.out.println(white + " " + black + " " + grey);
