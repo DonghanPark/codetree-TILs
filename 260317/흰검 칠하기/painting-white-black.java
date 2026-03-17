@@ -29,13 +29,13 @@ public class Main {
                     grid[curr][0] += 10;
                     grid[curr][1] = 10;
                 }
-                // System.out.println(grid[curr][0] + " " + grid[curr][1]);
                 if ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2)) {
                     grid[curr][1] = 100;
-                    curr += dir;
+                    // curr += dir;
                     // System.out.println("YES");
-                    continue;
+                    // continue;
                 }
+                // System.out.println(grid[curr][0] + " " + grid[curr][1]);
                 curr += dir;
             }
             curr -= dir;
