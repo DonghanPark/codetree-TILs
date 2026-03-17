@@ -1,3 +1,7 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -14,6 +18,7 @@ public class Main {
             else dir = -1;
 
             for (int j = 0; j < x; j++) {
+                // if (grid[curr][1]] == 100)
                 // if ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2)) {
                 //     grid[curr][1] = 100;
                 //     curr += dir;
@@ -29,7 +34,7 @@ public class Main {
                     grid[curr][0] += 10;
                     grid[curr][1] = 10;
                 }
-                if ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2)) {
+                if (grid[curr][0] > 99 || ((grid[curr][0] % 10 >= 2) && (grid[curr][0] / 10 >= 2))) {
                     grid[curr][1] = 100;
                     // curr += dir;
                     // System.out.println("YES");
