@@ -39,7 +39,7 @@ public class Main {
                 curr += dir;
             }
             curr -= dir;
-            System.out.println();
+            // System.out.println();
         }
         
         int white = 0;
