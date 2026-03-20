@@ -34,13 +34,13 @@ public class Main {
         }
 
         // 하, 좌, 상, 우
-        int[] dx = {-1, 0, 1, 0};
+        int[] dx = {1, 0, -1, 0};
         int[] dy = {0, -1, 0, 1};
         int currDir = num;
 
-        int count = 1;
+        int count = 0;
         while (x >= 0 && x < n && y >= 0 && y < n) {
-            // System.out.println(x + " " + y);
+            // System.out.println(x + " " + y + " " + currDir);
             if (grid[x][y] == '/')
                 currDir = currDir ^ 1;
             else
@@ -53,6 +53,8 @@ public class Main {
 
             x = nx;
             y = ny;
+
+            // System.out.println(x + " " + y + " " + currDir + "\n");
         }
 
         System.out.println(count);
